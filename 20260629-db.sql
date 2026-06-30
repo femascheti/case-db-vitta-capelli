@@ -148,6 +148,10 @@ INSERT INTO registro (id_pessoa, id_item, data_registro, observacao, status_regi
 -- Uma cliente fez um atendimento de hidratação que ainda está como "agendado", mas ela já compareceu e o serviço foi concluído. Como atualizamos o status desse registro para "concluído"?
 -- [agora escreva o código que ajuda a responder essa pergunta logo abaixo]
 
+UPDATE registro 
+SET status_registro = 'Concluído’ 
+WHERE id_registro = 1;
+
 
 -- Pergunta 2 (DELETE):
 -- Um cliente cancelou um agendamento e a empresa decidiu remover registros de atendimentos cancelados há mais de um ano para manter a base organizada. Como excluímos esses registros antigos?
